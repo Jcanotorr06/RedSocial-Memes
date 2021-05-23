@@ -33,7 +33,7 @@ collapseL.onclick = () =>{
         
     }
     document.getElementById('user-data').classList.toggle('hide');
-    document.getElementById('info').classList.toggle('hidden');
+    document.getElementById('info').classList.toggle('hide');
     document.getElementById('user-profile').classList.toggle('collapsePad');
     document.getElementById('tabs').classList.toggle('collapsePad');
     document.getElementById('logout').classList.toggle('collapsePad');
