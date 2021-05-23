@@ -63,7 +63,7 @@ main{
 #left{
     box-shadow: 2px 0px 11px 0px rgba(0,0,0,0.6);
     background-color: #fff;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 .inner-l{
@@ -83,13 +83,13 @@ main{
     right: 0;
     box-shadow: 2px 0px 11px 0px rgba(0,0,0,0.6);
     background-color: #fff;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 .inner-r{
     display: grid;
     grid-template-rows: 0.5fr 0.06fr 0.5fr;
-    height: 100vh;
+    min-height: 100vh;
     position: sticky;
     top: 0
 }
@@ -254,9 +254,8 @@ main{
 }
 
 .suggestions{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 0 0.1rem 0;
+    display: grid;
+    max-height: 100%;
 }
 
 .sug-title{
@@ -291,6 +290,7 @@ main{
 .sug-user-picture img{
     align-self: center;
     max-width: 45px;
+    max-height: auto;
     border-radius: 50%;
 }
 
@@ -497,7 +497,6 @@ i:hover{
 
 .modal-image img{
     align-self: center;
-    min-height: 50%;
     min-width: 50%;
     max-width: 100%;
     max-height: 100%;
@@ -617,7 +616,7 @@ i:hover{
         column-gap: 0.5rem;
     }
 
-    .tab-title, #user-data, .sug-user-button, .sug-user-data, .see-more, .sug-topic-button, .sug-topic-data, #info, .notif-cant{
+    .tab-title, #user-data, .sug-user-button, .sug-user-data, .see-more, .sug-topic-button, .sug-topic-data, #info, .notif-cant, .separator div{
         display: none;
     }
 
@@ -626,19 +625,78 @@ i:hover{
         justify-content: center;
     }
 
-    .notif-cant{
-        position: relative;
-        margin: 0;
-        z-index: 1;
-    }
-
     .sug-title{
         font-size: 10pt;
         padding: 0 0.5rem;
     }
 
+    .modal-container{
+        width: 80%;
+        height: 90%;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .modal-body{
+        flex-direction: column;
+        align-content: space-around;
+        justify-content: center;
+        padding-top: 0;
+    }
+
+    .modal-image{
+        max-height: 30%;
+        max-width: 100%;
+        min-width: none;
+        padding-top: 1rem;
+    }
+
+    .modal-image img{
+        max-height: 100%;
+    }
+
+    #profile-picture img{
+        align-self: center;
+        max-width: 47px;
+        border-radius: 50%;
+    }
+
+    .inner-l{
+        grid-template-rows:0.14fr 0.11fr auto 0.06fr 0.06fr 0.2fr ;
+
+    }
+
+    .post-buttons{
+        width: 30%;
+    }
+
   }
+.hide{
+    display: none;
+}
 
 .lockScroll{
     overflow: hidden;
+}
+
+.collapseL{
+    grid-template-columns: 0.1fr 0.95fr 0.25fr;
+    column-gap: 0.4rem;
+}
+.collapseR{
+    grid-template-columns: 0.25fr 0.95fr 0.1fr;
+    column-gap: 0.4rem;
+}
+.collapseBoth{
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    column-gap: 0.5rem;
+}
+.collapsePad{
+    padding-left: 0 !important;
+    justify-content: center;
+}
+
+.collapseTitle{
+    font-size: 10pt;
+    padding: 0 0.5rem;
 }
