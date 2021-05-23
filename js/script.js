@@ -5,14 +5,43 @@ const collapseL = document.getElementsByClassName('collapse')[0]
 const collapseR = document.getElementsByClassName('collapse-2')[0]
 const main = document.getElementsByTagName('main')[0]
 const tabTitle = document.getElementsByClassName('tab-title')
+const comment = document.getElementsByClassName('fa-comment')
+const heart = document.getElementsByClassName('fa-heart')
+const bookmark = document.getElementsByClassName('fa-bookmark')
+const star = document.getElementsByClassName('fa-star')
 
 for (let i = 0; i < images.length; i++) {
     images[i].onclick = () =>{
         overlay.classList.toggle('hidden')
         document.getElementsByTagName('body')[0].classList.toggle('lockScroll')
-    }
-    
+    }  
 }
+
+for (let i = 0; i < comment.length; i++) {
+    comment[i].onclick = () =>{
+        overlay.classList.toggle('hidden')
+        document.getElementsByTagName('body')[0].classList.toggle('lockScroll')
+    }   
+}
+
+for (let i = 0; i < heart.length; i++) {
+    heart[i].onclick = () =>{
+        heart[i].classList.toggle('fas');
+        heart[i].classList.toggle('activeIcon');
+    }   
+}
+for (let i = 0; i < bookmark.length; i++) {
+    bookmark[i].onclick = () =>{
+        bookmark[i].classList.toggle('fas');
+        bookmark[i].classList.toggle('activeIcon');
+    }   
+}
+for (let i = 0; i < star.length; i++) {
+    star[i].onclick = () =>{
+        star[i].classList.toggle('activeIcon');
+    }   
+}
+
 closeBtn.onclick = () =>{
     overlay.classList.toggle('hidden')
     document.getElementsByTagName('body')[0].classList.toggle('lockScroll')

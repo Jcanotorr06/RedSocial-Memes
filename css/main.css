@@ -35,6 +35,10 @@ i{
     font-size: 24pt;
 }
 
+i:hover{
+    cursor: pointer;
+}
+
 h1, h2{
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
@@ -707,4 +711,8 @@ i:hover{
 .collapseTitle{
     font-size: 10pt;
     padding: 0 0.5rem;
+}
+
+.activeIcon{
+    color: var(--main-color);
 }
